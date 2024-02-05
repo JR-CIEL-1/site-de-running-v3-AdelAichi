@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>SpaceX</title>
+</head>
+
+<body>
+    <!-- ... (le reste du code reste inchangé) -->
+
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="">
+        </a>
+    </div>
+    <nav class="desktop-main-menu">
+        <ul>
+            <li><a href="signin.html">S'inscrire</a></li>
+            <li><a href="signup.html">Se Connect</a></li>
+            <li><a href="training.html">Entrainement</a></li>
+            <li><a href="about.html">Coach</a></li>
+            <li><a href="contact.html">Tournoi</a></li>
+            <!-- Ajout du bouton de déconnexion -->
+            <li><a href="#" onclick="deconnexion()">Déconnexion</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hamburger Menu -->
+<button id="menu-btn" class="hamburger" type="button">
+    <span class="hamburger-top"></span>
+    <span class="hamburger-middle"></span>
+    <span class="hamburger-bottom"></span>
+</button>
+
+
+
+
+    <!-- Section A -->
+    <section class="section-a">
+        <div class="section-inner">
+            <div class="contact-clean">
+                <form method="post">
+                    <h2 class="text-center">sign in&nbsp;&nbsp;</h2>
+                    <div class="form-group"><input class="form-control" type="email" name="email" id="email" placeholder="Email"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password" id="password" placeholder="Password">
+                        <small class="text-danger invisible" id="pwd">Veuillez entrer un mot de passe d'au moins 8 caractères</small>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="button" onClick="verifierFormulaire()">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <ul>
+            <li>SpaceX &copy; 2022</li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

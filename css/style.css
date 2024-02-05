@@ -1,0 +1,534 @@
+/* Réinitialisation des styles par défaut du navigateur */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Header/Navbar */
+.main-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   width: 1920px;
+    background-color: black;
+    padding: 15px 20px;
+    z-index: 1000;
+    height: 70px;
+    
+   
+}
+.main-header a {
+    color: antiquewhite;
+}
+
+.logo {
+    width: 300px;
+    height: 50px;
+    background-image: url('img/02.jpg'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    margin-left: 60px;
+}
+
+.desktop-main-menu ul {
+    display: flex;
+}
+
+.desktop-main-menu ul li {
+    margin: 0 20px;
+}
+
+.desktop-main-menu ul li a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.4s;
+}
+
+.desktop-main-menu ul li a:hover {
+    color: #ddd;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('img/img.jpeg') center center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: antiquewhite;
+    
+}
+
+
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: antiquewhite;
+    
+}
+
+.hero-content .btn {
+    display: inline-block;
+    
+    padding: 8px 15px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 300px;
+}
+
+.hero-content .btn:hover {
+    background-color: #ddd;
+}
+
+/* Featured Events */
+.featured-events {
+    padding: 50px 20px;
+    text-align: center;
+    background-image: url('img/img.jpeg');
+    background-size: cover; /* Ajustez selon vos besoins */
+}
+
+.featured-events h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: antiquewhite;
+}
+
+
+.featured-events h1 {
+
+    color: antiquewhite;
+}
+
+.event-card {
+    max-width: 300px;
+    margin: 0 auto 30px;
+    
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.event-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.event-card p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.event-card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f4f4f4;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.event-card a:hover {
+    background-color: #555;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+    background: url('img/imggg.jpg');
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.about-section .btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f4f4f4;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 300px;
+}
+
+.about-section .btn:hover {
+    background-color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.contact-section .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 300px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+
+.contact-section .btn:hover {
+    background-color: #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 15px;
+}
+
+footer a {
+    color: white;
+    margin: 0 40px; /* Espacement égal à gauche et à droite des liens */
+}
+
+
+
+
+
+/* signin */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.section-a {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.contact-clean {
+    max-width: 400px;
+    margin: auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: url('img/fondnoir.jpg') center center / 150% 150% no-repeat;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.invisible {
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* signup */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.desktop-main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-inner {
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: url('img/') center center / 100% no-repeat;
+
+
+
+}
+
+
+.desktop-main-menu ul {
+    display: flex;
+}
+
+.desktop-main-menu li {
+    margin:  10px;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.section-a {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.contact-clean {
+    max-width: 800px; 
+    margin: auto;
+    background-color: #fff;
+    padding: 100px;
+    width: 600px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.invisible {
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+ /* style.css */
+/* tableau */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styliser le tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden; /* Masquer le contenu qui dépasse */
+    background-image: url('img/img.jpeg');
+    background-size: cover; /* Ajustez selon vos besoins */
+    border-radius: 8px; /* Ajouter des coins arrondis au tableau */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre légère */
+}
+
+/* Styliser les cellules */
+td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Augmenter la marge interne */
+    text-align: center;
+}
+
+/* Styliser les images dans les cellules */
+td img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Carrousel styles */
+.carousel-container {
+    overflow: hidden;
+    width: 80%;
+    margin: 20px auto; /* Ajouter de la marge en haut et en bas */
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-button {
+    cursor: pointer;
+    padding: 12px; /* Ajuster la taille du bouton */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px; /* Ajouter des coins arrondis au bouton */
+}
+
+
+
+
