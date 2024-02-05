@@ -285,6 +285,76 @@ footer a {
 
 
 
+
+
+
+
+
+
+/* tableau */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden; 
+    background-image: url('img/img.jpeg');
+    background-size: cover; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+td {
+    border: 1px solid #ddd;
+    padding: 12px; 
+    text-align: center;
+}
+
+
+td img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+
+.carousel-container {
+    overflow: hidden;
+    width: 80%;
+    margin: 20px auto; 
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-button {
+    cursor: pointer;
+    padding: 12px; 
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px; 
+}
+
+
+
+
+
+
+
+
+
 /* signin */
 
 body {
@@ -362,7 +432,8 @@ footer {
     width: 100%;
 }
 
-/* signup */
+
+
 
 body {
     font-family: 'Arial', sans-serif;
@@ -470,65 +541,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-
-
-/* tableau */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    overflow: hidden; 
-    background-image: url('img/img.jpeg');
-    background-size: cover; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-
-td {
-    border: 1px solid #ddd;
-    padding: 12px; 
-    text-align: center;
-}
-
-
-td img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-
-.carousel-container {
-    overflow: hidden;
-    width: 80%;
-    margin: 20px auto; 
-}
-
-.carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-button {
-    cursor: pointer;
-    padding: 12px; 
-    background-color: #333;
-    color: #fff;
-    border: none;
-    outline: none;
-    margin: 10px;
-    font-size: 18px;
-    border-radius: 5px; 
-}
-
-
-
-

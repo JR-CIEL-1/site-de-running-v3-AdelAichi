@@ -62,14 +62,22 @@ function reset() {
 // signin
 
 function verifierFormulaire() {
-  var password = document.getElementById('password').value;
-  if (password.length < 8) {
-      document.getElementById('pwd').classList.remove('invisible');
-  } else { 
-      document.getElementById('pwd').classList.add('invisible');
+  let password = document.getElementById('pwd');
+  let email = document.getElementById('email');
+  
+  if (password.value.length <= 8) {
+      password.classList.add("error");
+      password.classList.remove("valid");
       alert("Formulaire soumis avec succès!");
+  } else { 
+  
+    password.classList.add("valid");
+    password.classList.remove("error");
+    
   }
 }
+
+
 
 
 // signup
