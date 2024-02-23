@@ -11,57 +11,47 @@
 </head>
 
 <body>
-   
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+        <nav class="desktop-main-menu">
+            <ul>
+                <li><a href="signin.html">S'inscrire</a></li>
+                <li><a href="signup.html">Se Connect</a></li>
+                <li><a href="training.html">Entrainement</a></li>
+                <li><a href="about.html">Coach</a></li>
+                <li><a href="contact.html">Tournoi</a></li>
+                <li><a href="#" onclick="deconnexion()">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <button id="menu-btn" class="hamburger" type="button">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+    </button>
 
-  
-  <header class="main-header">
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="">
-        </a>
-    </div>
-    <nav class="desktop-main-menu">
-        <ul>
-            <li><a href="signin.html">S'inscrire</a></li>
-            <li><a href="signup.html">Se Connect</a></li>
-            <li><a href="training.html">Entrainement</a></li>
-            <li><a href="about.html">Coach</a></li>
-            <li><a href="contact.html">Tournoi</a></li>
-          
-            <li><a href="#" onclick="deconnexion()">Déconnexion</a></li>
-        </ul>
-    </nav>
-</header>
-
-
-<button id="menu-btn" class="hamburger" type="button">
-    <span class="hamburger-top"></span>
-    <span class="hamburger-middle"></span>
-    <span class="hamburger-bottom"></span>
-</button>
-
-
-
-
-   
     <section class="section-a">
         <div class="section-inner">
             <div class="contact-clean">
                 <form method="post">
                     <h2 class="text-center">sign in&nbsp;&nbsp;</h2>
                     <div class="form-group"><input class="form-control" type="email" name="email" id="email" placeholder="Email"></div>
-                    <div class="form-group"><input class="form-control" type="password" name="password" id="pwd" placeholder="Password">
+                    <div class="form-group"><input class="form-control" type="password" name="password" id="password" placeholder="Password">
                         <small class="text-danger invisible" id="pwd">Veuillez entrer un mot de passe d'au moins 8 caractères</small>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary" type="button" onClick="verifierFormulaire()">Send</button>
+                        <button class="btn btn-primary" type="button" onClick="verifierFormulair2()">Send</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-    
+
     <footer>
         <ul>
             <li>SpaceX &copy; 2022</li>

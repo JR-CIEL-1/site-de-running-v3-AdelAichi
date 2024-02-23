@@ -59,31 +59,7 @@ function reset() {
 }
 
 
-// signin
-
 function verifierFormulaire() {
-  let password = document.getElementById('pwd');
-  let email = document.getElementById('email');
-  
-  if (password.value.length <= 8) {
-      password.classList.add("error");
-      password.classList.remove("valid");
-      alert("Formulaire soumis avec succès!");
-  } else { 
-  
-    password.classList.add("valid");
-    password.classList.remove("error");
-    
-  }
-}
-
-
-
-
-// signup
-// script.js
-
-function verifierFormulaire2() {
   var name = document.getElementById("name").value
   var fname = document.getElementById("firstname").value
   var password = document.getElementById("psswd").value
@@ -155,5 +131,30 @@ if (age === "")  {
 
 
 }
+
+
+function verifierFormulaire2() {
+  var password = document.getElementById("password").value
+  var email = document.getElementById("email").value
+  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+ 
+  if (password == ''  | password.length < 8) {
+    document.getElementById("password").classList.add("error");
+    pwd.classList.remove('invisible');
+    
+  } else {
+    pwd.classList.add('invisible');
+    document.getElementById("password").classList.add("valid");
+    document.getElementById("password").classList.remove("error");
+  }
+
+  if  (email === '' || !emailPattern.test(email)){
+    document.getElementById("email").classList.add("error"); 
+    
+  } else {
+    document.getElementById("email").classList.add("valid");
+    document.getElementById("email").classList.remove("error"); 
+    }
+  }
 
 
