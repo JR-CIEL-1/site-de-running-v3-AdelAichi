@@ -119,17 +119,51 @@ function verifierFormulaire() {
     
   }
 
-if (age === "")  {
-  document.getElementById("age").classList.add("error");
-
-
-}else{
-  document.getElementById("age").classList.add("valid");
-  document.getElementById("age").classList.remove("error");
-}
 
 
 
+
+var newUser = {
+  "password": password,
+  "email": email
+};
+
+fetch('p.json')
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Erreur lors de la récupération du fichier JSON');
+  }
+  return response.json();
+})
+.then(data => {
+  console.log('Données JSON récupérées :', data);
+
+  if (!data) {
+    throw new Error('Fichier JSON vide ou mal formé');
+  }
+
+  // Ajouter le nouvel utilisateur aux données existantes
+  data.push(newUser);
+
+  // Enregistrer les données mises à jour dans le fichier JSON
+  return fetch('p.json', {
+    method: 'PUT', // ou 'POST' selon votre cas
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+})
+.then(response => response.json())
+.then(data => {
+  // Réaliser des actions supplémentaires si nécessaire
+  console.log('Utilisateur enregistré avec succès.', data);
+  afficherPageBienvenue(newUser); // Afficher la page de bienvenue si vous le souhaitez
+})
+.catch(error => {
+  // Gérer les erreurs d'enregistrement
+  console.error('Erreur lors de l\'enregistrement :', error);
+});
 }
 
 
@@ -197,5 +231,3 @@ welcomeMessage.classList.add('message-welcome');
 welcomeMessage.innerHTML = `<h2>Bienvenue, ${user.email} !</h2>`;
 document.body.appendChild(welcomeMessage);
 }
-
-
