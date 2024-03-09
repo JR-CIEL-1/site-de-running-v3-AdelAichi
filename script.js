@@ -66,6 +66,9 @@ function verifierFormulaire() {
   var email = document.getElementById("email").value;
   var message = document.getElementById("message").value;
 
+ 
+
+
   if (name === "") {
     document.getElementById("name").classList.add("error");
   } else {
@@ -174,18 +177,11 @@ function verifierFormulaire2() {
     document.getElementById("email").classList.remove("error");
   }
 
-// Assuming you have already defined 'email' and 'password' variables
-
 // Si les champs sont valides, procéder à la connexion
 if (email && password) {
   // Charger le fichier JSON contenant les informations d'identification
   fetch('p.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Erreur lors de la récupération du fichier JSON');
-      }
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
       // Vérifier si l'email et le mot de passe correspondent à ceux du fichier JSON
       const user = data.find(user => user.email === email && user.password === password);
@@ -195,38 +191,41 @@ if (email && password) {
         console.log('Bienvenue, ', user.email);
       } else {
         // Sinon, afficher un message d'erreur ou effectuer une autre action
-        console.log("Données incorrectes");
+ 
+        console.log("Donnée incorect");
       }
     })
-    .catch(error => {
+    .catch((error) => {
       // Handle network errors and exceptions
-      console.error('Une erreur est survenue : ', error);
+      console.error("Une erreur est intervenu : ", error);
     });
 }
+}
+
 
 // Fonction pour afficher la page de bienvenue
 function afficherPageBienvenue(user) {
-  // Récupérer l'élément formulaire de connexion
-  const formulaireConnexion = document.getElementById('10');
+// Récupérer l'élément formulaire de connexion
+const formulaireConnexion = document.getElementById('10');
 
-  // Vérifier si l'élément existe
-  if (formulaireConnexion) {
-    // Cacher le formulaire de connexion
-    formulaireConnexion.style.display = 'none';
+// Vérifier si l'élément existe
+if (formulaireConnexion) {
+  // Cacher le formulaire de connexion
+  // Afficher la page de bienvenue avec les informations de l'utilisateur
+  const welcomeMessage = document.createElement('div');
+  welcomeMessage.classList.add('welcome');
+  welcomeMessage.innerHTML = `<h2>Bienvenue, ${user.email} !</h2>`;
+  formulaireConnexion.replaceWith(welcomeMessage);
 
-    // Afficher la page de bienvenue avec les informations de l'utilisateur
-    const welcomeMessage = document.createElement('div');
-    welcomeMessage.classList.add('welcome');
-    welcomeMessage.innerHTML = `<h2>Bienvenue, ${user.email} !</h2>`;
-    formulaireConnexion.parentNode.insertBefore(welcomeMessage, formulaireConnexion.nextSibling);
 
-    // Remplacer le logo avec le profil de l'utilisateur
-    const logo = document.getElementById('profil');
-    if (logo) {
-      logo.src = user.profil;
-    }
+  formulaireConnexion.replaceWith(welcomeMessage);
+
+  const logo = document.getElementById('profil');
+
+      if (logo) {
+          logo.src = user.profil;
+      }
   }
 }
 
 
-}
